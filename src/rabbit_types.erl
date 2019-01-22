@@ -117,7 +117,7 @@
                   auto_delete     :: boolean(),
                   exclusive_owner :: rabbit_types:maybe(pid()),
                   arguments       :: rabbit_framing:amqp_table(),
-                  pid             :: rabbit_types:maybe(pid()),
+                  pid             :: rabbit_types:maybe(pid() | {pid(), pid()}),
                   slave_pids      :: [pid()],
                   vhost           :: rabbit_types:vhost()}).
 
